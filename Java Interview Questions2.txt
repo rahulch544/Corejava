@@ -1,0 +1,507 @@
+Core Java:
+------------
+Eg for interface implementing interface.
+
+hashmap vs hashset.
+    => HashMap internally uses hashing to store objects.
+       HashSet internally uses a HashMap object to store objects.
+
+Array vs list. 
+    => List is interface 
+    => Array is implementation of List
+
+What,Where is Static.
+Static  is defined at class, indicates class owned variables, methods.
+
+WAP for pyramid.
+
+WAP for count of words in a sentence without string functions.
+==>Count words by space character, If multiple spaces found ignore them.
+
+Get each character count in a string.
+==> Using HashMap or array of size 2 bytes large (or 16 bits).
+
+Find missing number in an sorted array of 1-100 numbers.
+ => Xor Operation by given numbers and 1-100 numbers 
+
+Where is default keyword.
+ => Default Keyword is used in switch statement
+
+Java 5,6,7,8 new features?
+ => Java 8 Features: lambda expressions, functional interface, method references
+
+Runnable vs Thread.
+ => Runnable: Is a interface which contains one method (Run) to Impl
+    => Thread : Is a class which internally implements Run method
+    * Note: Every class that is used as thread must implement Runnable interface and over ride it’s run method.
+
+Synchronised block vs method.
+ => Only One thread can access at a time synchronized method
+    => Method can be accessed at a time by multiple Method
+
+Thread life cycle.
+    => 1.New 2.Active 3.Blocked / Waiting 4.Timed Waiting 5.Terminated
+
+Comparable vs Comparator.
+    => Comparable interface implemented by class, Which contains method compareTo(Obj) to be implemented
+        => Comparator (functional interface) with compare function(Obj a, Obj b)
+
+Perfect Singleton class.
+    =>By throwing error while calling constructor, if Object varibles not null
+
+Types of class loaders.
+    =>There are three types of built-in ClassLoader in Java.
+
+        => Bootstrap Class Loader – It loads JDK internal classes. 
+                It loads rt.jar and other core classes for example java.lang.* package classes.
+        =>  Extensions Class Loader – It loads classes from the JDK extensions directory,
+                usually $JAVA_HOME/lib/ext directory.
+        => System Class Loader – This classloader loads classes from the current classpath. 
+                We can set classpath while invoking a program using -cp or -classpath command line option.
+
+Checked vs unchecked exceptions.
+    => checked exceptions needs to be handled EG: IOException,SQLException,ClassNotFoundException,
+        => Unchecked exceptions thrown during run time EG: Arithmetic Exception, IndexOfOutOfBoundException
+
+Collections used in your application.
+    => Arraylist, Set
+
+arraylist al = new arraylist();	and	list al = new arraylist();
+
+Hashing algorithm.
+ => Using Hashing Table & Hash equals & Hashcode methods.
+  => If collision then Linear Probing, If more than 8 elements then convert to Binary Tree
+
+ArraySort Vs CollectionSort
+    ArraySort for Primitive Data type whereas Object Sort is done by Collections
+
+Collections sort algorithm.
+    Collections.sort(List), Collections.sort(List,Compartor)
+
+arraylist<string> al = new arraylist<string>(); shall i add number to list ? is it allows ?
+
+sort emplyee using salary.
+
+comparator, comparable belongs to which package.
+  => comparable From  java.lang
+    => comparator From java.util
+
+differences between singleton and factory design patterns.
+    =>A singleton pattern ensures that you always get back the same instance of whatever type you are retrieving, 
+        whereas the factory pattern generally gives you a different instance of each type.
+    =>The purpose of the singleton is where you want all calls to go through the same instance. 
+
+count duplicate charecters in a string.
+   => Hash Or Set
+
+How to eliminate duplicate of the list.
+    => Using LinkedHashSet
+
+Difference between abstraction and interface with real example.
+    => Abstraction Contains atleast One method with abstract key word and no definition.
+        => Interface all methods are abstract Methods
+
+How to create thread, which way is better.
+    => Better way to create thread is using Runnable Interface as it is a interface ,
+     In future class can extend other classes.
+        => If Class extends thread , it cannot extend other classes  
+
+Types of polymorphism with examples.
+    => Static Polymorphism & Dynamic Polymorphism
+        => Static Polymorphism: Overloading
+        => Dynamic Polymorphism: Overriding
+            Animal a = new Dog();
+
+Difference between final finalise and finally.
+ => final applicable to class not extend able, method not overriding, final variable no re-declaration
+    => finalize => Method called before Garbage Collector
+    => finally => Try & Catch Block 
+
+Throw and throws difference.
+    => Throw to raise exception
+     => throws Used with class so , that exception can occur.
+
+difference hash table and Hashmap.
+ => HashMap is non-syncronized and is not thread safe while HashTable is thread safe and is synchronized. 
+    =>HashMap allows one null key and values can be null whereas HashTable doesn't allow null key or value. HashMap is faster than HashTable. 
+    =>HashMap iterator is fail-safe where HashTable iterator is not fail-safe.
+
+Exectutor api.
+ => For executing multiple threads using Thread Pool executor.
+    => Using lesser threads, thus saving process memory
+    => Ideal Thread Pool executor is no of cores if CPU intesive if IO based then many threads
+
+Design patterns list.
+Decorator design pattern.
+
+Arraylist vs linked list.
+    => Arraylist Indexed variables
+        => Linked List non index based
+
+What is the use of intern() method in String Class
+    => intern method to get reference of String from String pool 
+
+How to write the object to String constant pool when String object created using new String()
+    => It is automatically generated
+
+Try with resources
+HashMap internal implementation?
+Concurrent hashmap?
+ => Thread Safe HashMap
+
+Fail safe vs fail fast.
+ => Fail-Fast systems abort operation as-fast-as-possible exposing failures immediately 
+    => and stopping the whole operation. Whereas, Fail-Safe systems don't abort an operation 
+    => in the case of a failure. Such systems try to avoid raising failures as much as possible 
+
+How to Create immutable Class in java?
+    => With all final class
+
+Differences between String buffer and string builder?
+    => Stringbuffer thread Safe
+    => String Builder non thread Safe
+
+Exception handling hierarchy
+
+String a = “hari”;
+String b = new String(“hari”);
+a==b? => False
+
+Hashcode and equals ?
+Internal implementation of arrayList size increment?
+    => 50% size increase when reaches limit
+    => whereas 100% increase in vectorList size increment
+
+When to use arrayList and LinkedList?
+    => ArrayList is for get faster
+    => LinkedList is for set faster
+
+Which collection do you use if we want to store the elements without duplicates and 
+insertion order must be preserved
+ => LinkedHashSet
+
+How to create an object for inner static class from outer class main method?
+
+How to store elements in doubly linked list?
+
+Difference between arraylist and vector?
+    => Vector is Thread Safe and size doubles when reaches limit
+    => ArrayList is non Thread safe and size increases 50% when reaches limit
+
+Differences between hashmap and hashtable?
+
+How to searialize object with exmaple and why we need to searialize?
+    => By Implementing searialize class, To transfer data over network.
+
+How compiler know wether the method exists in the subclass or not when we use super calss reference variable to call subclass method?
+
+Covariant return type.
+    => Return Type is Class Object itself, Different way of Overriding by changing return type.
+
+What is generic.
+=> Similar to templates in C++ 
+
+What is rehasing.
+Rehashing.
+Rehashing:
+=>As the name suggests, rehashing means hashing again.
+ =>Basically, when the load factor increases to more than its pre-defined
+  =>value (default value of load factor is 0.75), the complexity increases. 
+  =>So to overcome this, the size of the array is increased (doubled) 
+  =>and all the values are hashed again and stored in the new double sized array 
+  =>to maintain a low load factor and low complexity.
+
+Advantage of lamda function in Java 8.
+ => Less lines of code, and Best suites for inline functions.
+
+Functional interface.
+ => interface with one method only. And
+
+Stream api in Java .
+
+What is ThreadLocal.
+The TheadLocal construct allows us to store data that will be accessible only by a specific thread.
+
+
+Types of memories in Java.
+There are two kinds of memory used in Java. These are called stack memory and heap memory.
+
+Hashmap vs Treemap vs LinkedHashMap.
+   => Hashmap => Does not  Stores Insertion Order
+    Treemap => Sorted Insertion Order
+    LinkedHashMap => Stores Insertion Order
+
+
+
+
+
+Spring: 
+--------
+1) What is dependency injection
+    In software engineering, dependency injection is a design pattern in 
+    which an object or function receives other objects or functions that it depends on.
+
+    Objects are injected from XML configuration , Making class which uses that object more loosley coupled,
+    In SpringBoot it can be done via Autowire & Required Object can be inserted using Qualifier
+
+2) How many type of dependency injections are there
+    =>  setter and constructor injection
+
+3) What is IOC
+    => Spring IoC is the mechanism to achieve loose-coupling between Objects dependencies. To achieve loose coupling and dynamic binding of the objects at runtime, objects dependencies are injected by other assembler objects.
+    =>
+Dependency Injection is the method of providing the dependencies and Inversion of Control is the end result of Dependency Injection
+
+4) What is difference between BeanFactory and ApplicationContext
+ => While the BeanFactory provides basic functionality for managing and
+    => manipulating beans, often in a programmatic way, 
+    =>  the ApplicationContext  provides extra functionality like MessageSource, Access to resources, 
+    => Event propagation to beans, Loading of multiple (hierarchical) contexts etc
+
+5) What is difference between setter and constructor injection
+   =>Passing dependency Object into setter fucntion. Passing object into constructor function.
+
+    In XML config we define bean that bean or Object
+    => Required Object is passed to setter fields
+        => Required Object is passed to consrtuctor. 
+
+6) What is Autowiring. In how many ways we can autowire a Spring BeanFactory
+    => Get Object from Spring Container.
+        => Qualifier if their are more child objects.
+        => How many ways we can Autowire in Spring?
+ The Modes of Autowiring are:
+=>‘no’ means the autowiring is OFF.
+    =>‘byName’ will look for a bean named exactly the same as the property that needs to be autowired.
+    =>‘byType’ permits a property to be autowired if there is exactly one bean of the property type in the container.
+    => ‘constructor’  is equivalent to byType but operates to constructor arguments.
+    => ‘Autodetect’ has been deprecated.
+
+
+7) what are Spring Bean Scopes
+    singleton - only one instance of the spring bean will be created for the spring container. This is the default spring bean scope. While using this scope, make sure bean doesn’t have shared instance variables otherwise it might lead to data inconsistency issues.
+    prototype – A new instance will be created every time the bean is requested from the spring container.
+    request – This is same as prototype scope, however it’s meant to be used for web applications. A new instance of the bean will be created for each HTTP request.
+    session – A new bean will be created for each HTTP session by the container.
+    global-session – This is used to create global session beans for Portlet applications.
+
+8) Explain Spring Bean Life Cycle
+=> Bean life cycle is managed by the spring container. 
+ =>When we run the program then, first of all, the spring container gets started.
+ =>After that, the container creates the instance of a bean as per the request, 
+ =>and then dependencies are injected. And finally, the bean is destroyed when the spring container is closed.
+
+9) Explain @Component, @Controller, @Service and @Repository annotations
+
+10) What is @Autowire, @Qulifier and @Requiered annotations
+
+11) Explain Spring MVC flow
+
+12) How to Handle Exceptions in Spring MVC
+
+13) configuring Spring JDBC and Spring ORM 
+
+14) Spring transation management
+
+15) Is singleton bean is thread safe or not
+ =>Singleton beans does not provide thread safety and now you know that instance variables 
+  =>usage may lead to unexpected result,
+  =>you have 2 options to solve the same : Don't use instance variables in multithreaded environment.
+
+16) What happens if we inject constructor and setter injection in a bean  
+Is spring uses Singleton Design Pattern for Singleton scope beans.
+Restcontroller vs Controller.
+  =>@Controller is used to mark classes as Spring MVC Controller.
+  => @RestController annotation is a special controller used in RESTful Web services,
+  => and it's the combination of @Controller and @ResponseBody annotation.
+  => It is a specialized version of @Component annotation
+
+What is spring bean default scope?
+    => Singleton
+
+How to handle exceptions in spring.
+
+Spring AOP and DI ?
+Point cut, Joint point in AOP.
+=>JoinPoint
+    =>A JoinPoint represents a point in your application where you can plug-in AOP aspect. 
+    =>You can also say, it is the actual place in the application where an action will be taken 
+    =>using Spring AOP framework. Consider the following examples −
+    =>All methods classes contained in a package(s).
+   => A particular methods of a class.
+
+=>Pointcut
+    =>Pointcut is a set of one or more JoinPoint where an advice should be executed. You can specify Pointcuts using expressions or patterns as we will see in our AOP examples. In Spring, Pointcut helps to use specific JoinPoints to apply the advice. Consider the following examples −
+
+    =>@Pointcut("execution(* com.tutorialspoint.*.*(..))")
+
+    =>@Pointcut("execution(* com.tutorialspoint.Student.getName(..))")
+
+Where did you use AOP.
+Spring security.
+
+
+Hibernate:
+-----------------
+1) What is difference between jdbc and hibernate
+2) Explain steps to open SessionFactory and session in hibernate (prepare mapping file and configuration files)
+3) what is the difference between save and persist
+    =>The save() method provides an identifier with the intent of an insert query being executed immediately for getting the identifier. 
+    =>It does not matter whether it is outside or inside a transaction.
+    => The persist() method fails to execute a given insert query in case it is placed outside transaction boundaries.
+
+4) what is the difference between get and load
+5) what is the difference between update and merge
+6) what is the life cycle of POJO class (Transient, persist and detached state)
+7) Difference between transient and detached states
+8) what is composite ID
+9) what is component mapping
+10) what is generator classes in hibernate
+11) Explain first and second level cache in hibernate
+    => First level cache is a session level cache and it is always associated with session level object.
+    => Second level cache is session factory level cache and it is available across all sessions. 2. Enabled. It is enabled by defaul
+
+12) All Relations along with attributes like cascade, inverse, fetch, lazy etc
+13) Hibernate SessionFactory is thread safe
+14) Hibernate Session is thread safe
+15) Bulk operation techniques in hibernate (HQL, Criteria, Native SQL)
+One too many and many to one mapping in hibernate.
+how many mapping files we can put in hibernate configuration file
+what are the eliments in hibernate configuration file
+Joins in HQL.
+HBM2DDL.
+Call procedures from hibernate.
+No of caches in Hibernate.
+
+
+Web Services:
+---------------------
+What is XML.
+Rest life cycle.
+Rest vs SOAP.
+WSDL elements.
+List of Annotations in Rest.
+Authentication in web services.
+
+
+Database:
+----------------------
+ACID properties.
+Adv and DisAdv of indexes in DB.
+Normalisation.
+Functiona vs Procedures in DB.
+Query tuning.
+Database Joins.
+SQL query no of employees with department name.
+SQL query department name which has more than one employee.
+Where clause vs having clause.
+
+
+AngularJS:
+------------------------
+What is AngularJS.
+What are the features of it.
+What is directive.
+
+
+
+Servlet life cycle.
+Composite key. Query to 3rd highest salary.
+Web server and application server.
+
+How many ways we can create json
+
+Internal implementation of String replace?
+		Find the elements which are not present in the second array
+        Example:  {0,2,5,7,8}
+                 {2,4,6,7}
+                final out put is 0,5,8
+
+
+
+What is the of JOIN in threads
+
+Real time scenario of abstraction and encapsulation?
+
+Real time scenario when to use singleton and prototype scope?
+How can you get rid of too many connections error when specified limit reached?
+
+
+
+
+
+ServletConfig vs ServletContext.
+Properties file in spring cfg file.
+Servlet life cycle.
+Jsp implicit objects.
+SOAP elements.
+
+Database Triggers.
+Connection pooling.  
+
+
+
+
+Logging levels.
+SQL queries for interviews.
+
+XSD.
+Agile methodology.
+Many to many database implementation.
+
+reason for job change
+explain status codes : 200. 403. 404. 500.
+explain in details 404.
+questions from resume [firebug] : webservice client browser select box not working how u will check it
+ans : networking option in firebug [to monitor request]
+why firebug ? what we can do with it
+what are the exceptions in spring and hibernate
+
+
+GET or POST which have payload ?
+how many tables and classes are need ?
+explain mappings one to one, one to many [only asked theoritical no need of code or tags or annotations]
+resume question : have u used scrum ? explain
+
+
+
+
+stringbuffer vs builder
+serialization vs synchronization
+hashmap vs hashtable
+remove duplicates from arraylist
+linux basic commands
+frist level vs second level caches
+what is WSDL
+equi joins
+single page app vs traditional
+ 
+reverse an array without having another array and without predefined functions.
+WAP for prime numbers and factorial.
+WAP for finding last duplicate char in the string.
+Serialization and real time example.
+WAP for tax calculation from income using IT slabs.(Even slabs inc/dec
+then it should work)
+How to do an addition for very big numbers stored in two different
+files(long type is not sufficient to hold it)
+oops concepts
+WAP for Single ton class
+WAP for immutable class.
+Object and class locks in synchronization.
+Hashtable vs Concurrent hashmap.
+synchronized map vs concurrent map.
+=> ConcurrentHashMap It locks some portion of the map.	
+=>Synchronized HashMap It locks the whole map.
+ 
+ 
+SQL query to get employee names who has salary gt their supervisors(both
+are in same table)
+ 
+ 
+About Hibernate caches.
+Get vs load
+joins in criteria api
+ 
+Single URI for multiple services(get,add,update,delete)
+transaction management in microservices.
+ 
+Synchronization in AJAX calls.
