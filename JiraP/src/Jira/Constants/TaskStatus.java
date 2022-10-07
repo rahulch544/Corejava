@@ -1,6 +1,6 @@
 package Jira.Constants;
 
-public enum JiraStatus {
+public enum TaskStatus {
     OPEN,
     IN_PROGRESS,
     COMPLETED,
