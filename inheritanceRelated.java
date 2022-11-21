@@ -49,6 +49,9 @@ public class inheritanceRelated {
 
 class ParentA {
 
+    public ParentA() {
+        System.out.println("ParentA Constructor called");
+    }
     int a=1;
     void fcnA(){
         System.out.println("PrintA Dummy");
@@ -58,6 +61,9 @@ class ParentA {
 
 class ChildAparentCopy extends ParentA{
 
+    public ChildAparentCopy() {
+        System.out.println("ChildAparentCopy Constructor called");
+    }
 }
 
 class ChildAparent extends ParentA{
