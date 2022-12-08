@@ -23,9 +23,24 @@ public class SingletonClass implements Serializable {
     }
 
     public static SingletonClass getInstance(){
-        if(singletonClass == null)
-            singletonClass = new SingletonClass();
-        return singletonClass;    
+        // if(singletonClass == null)
+        //     singletonClass = new SingletonClass();
+        // return singletonClass;  
+        
+        if (singletonClass == null)
+        {
+          //synchronized block to remove overhead
+          synchronized (SingletonClass.class)
+          {
+            if(singletonClass==null)
+            {
+              // if instance is null, initialize
+              singletonClass = new SingletonClass();
+            }
+           
+          }
+        }
+        return singletonClass;
     }
 
     // implement readResolve method from serialization effect
