@@ -1,0 +1,32 @@
+Q: One entity can map to multiple tables(Hibernate)?
+A: Yes, using SecondaryTable annotation.
+
+Q: SOAP vs REST
+A: Security, simplicity, xml data vs all type data.
+
+Q: Criteria API in Hibernate.
+A: No need to have a knowlwdge on queries to interact with DB.
+
+Q: How to make a class as a Rest service.
+A: Path annotation on class and method with a string parameter.
+
+Q: What is Consumes and Produces annotation in Rest services.
+A: Consumes to specify a MIME type to accept or consume from client. Produces to specify a MIME type to produce or send to the client.
+
+Q: Front Controller of Spring.
+A: DispatcherServlet.
+
+Q: What is a Session Factory in Hibernate.
+A: It is a factory of session instances. Session object is an interface b/w application and DB.
+
+Q: WSDL full form.
+A: Web Services Description Language.
+
+Q: What is Web Service.
+A: A web service is a software system designed to support interoperable machine-to-machine interaction over a network.
+
+Q: How request will be processed.
+A: Based on url pattern, respective servlet will be called as configured in the web.xml. Servlet will call will respective controller based on the endpoint url.
+
+Q: What are the ways to read request data in Rest servies.
+A: QueryParam, PathParam, FormParam, MatrixParam, HeaderParam, CookieParam.
